@@ -4,7 +4,7 @@ mydb = mysql.connector.connect(host="localhost", user="root", passwd="dps123", c
 cur = mydb.cursor()
 cur.execute("Create database if not exists AKHospital")
 cur.execute("use AKHospital")
-cur.execute("create table if not exists Patient(PNo varchar(9) primary key, Patient_Name varchar(25), Diagnosis varchar(30), DOB date, RoomNo integer(3);")
+cur.execute("create table if not exists Patient(PNo varchar(9) primary key, Patient_Name varchar(25), Diagnosis varchar(30), DOB date, RoomNo integer(3));")
 cur.execute("create table if not exists Log(PNo varchar(20) primary key, passw varchar(20));")
 mydb.commit()
 
@@ -87,13 +87,12 @@ def view():
 
 
 
-
-
 def cuslogin():
     for i in range(5, 0, -1):
         print(f"Logging in in {i}....")
             time.sleep(1)
     print("\nWelcome to the LOGIN Portal!")
+    
     ps = "uk"
     while True:
         PNo = input(f"Enter the LOGIN ID :  ")
@@ -105,17 +104,19 @@ def cuslogin():
                 print("\nLOGIN Success!")
                 m = True
                 ps = "go"
-                break
-            
+        
         if m == False:
-            print("LOGIN ID/ Password didn't match. Try again of register yourself!")
+            print("LOGIN ID/Password didn't match. Try again or of register yourself!")
             print("Enter 1 to Try again\nEnter 2 to exit LOGIN window")
             d = input("Please tell : ")
             if d == "1":
                 continue
             elif d == "2":
                 break
-
+            
+        elif m == True:
+            break
+        
     if ps == "go":
         while True:
             print("\nWelcome to Your Portal !")
