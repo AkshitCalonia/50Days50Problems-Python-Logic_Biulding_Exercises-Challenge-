@@ -90,7 +90,7 @@ def view():
 def cuslogin():
     for i in range(5, 0, -1):
         print(f"Logging in in {i}....")
-            time.sleep(1)
+        time.sleep(1)
     print("\nWelcome to the LOGIN Portal!")
     
     ps = "uk"
@@ -156,7 +156,7 @@ def newreg():
             cur.execute("Select * from Log")
             k = False
             for i in cur:
-                if userid in i:
+                if PNo in i:
                     print("This ID already exists, try something else!")
                     k = True
                 else:
