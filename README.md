@@ -1,5 +1,5 @@
 # Logic_Biulding_Exercises--Python-
-
+50Days50Problems
 This is an initiative taken by me to develop my logic skills. Because I believe that just learning a language is not enough to called yourself a perfect programmer. 
 Thats why I did it :)
 Here, questions are generally longer than the answers ;)
